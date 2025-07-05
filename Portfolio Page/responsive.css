@@ -1,0 +1,193 @@
+/* ----------For Small Screen ---------- */
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 800px){
+    /*
+    #header{
+        background-image: url('./Images/Cream\ Brown\ Aesthetic\ Watercolor\ Phone\ Wallpaper.png');
+    }
+        */
+    .header-text{
+        
+        font-size: 18px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #8E1616;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.7s;
+        border-radius: 5px;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1 , .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 16px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left , .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+/* Mobile (up to 600px) */
+@media only screen and (min-width: 481px) and (max-width: 1023px){
+    .container {
+        padding: 10px 5%;
+    }
+
+    nav ul#sidemenu {
+        display: none; /* Hide nav links by default on mobile */
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        background: #1D1616;
+        flex-direction: column;
+        padding-top: 60px;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        z-index: 1000;
+    }
+
+    nav ul#sidemenu.show {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    nav ul#sidemenu li {
+        display: block;
+        margin: 25px 20px;
+        font-size: 22px;
+    }
+
+    nav i.fa-bars {
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+        color: white;
+    }
+
+    nav i.fa-x {
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        display: block;
+    }
+
+    /* Header text smaller */
+    .header-text {
+        margin-top: 10%;
+        font-size: 18px;
+    }
+
+    .header-text h1 {
+        font-size: 20px;
+    }
+
+    /* About Section stacking columns vertically */
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+        margin-bottom: 25px;
+    }
+
+    .about-col-1{
+        padding-bottom: 20px;
+    }
+
+    /* Services and Work grid smaller */
+    .services-list, .work-list {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    /* Contact section stacking */
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* Footer padding smaller */
+    .copyright {
+        padding: 15px 0;
+        font-size: 14px;
+    }
+}
+
+/* Tablet (600px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        padding: 10px 8%;
+    }
+
+    .header-text {
+        margin-top: 10%;
+        font-size: 22px;
+    }
+
+    .header-text h1 {
+        font-size: 38px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+        margin-bottom: 25px;
+    }
+
+    .services-list, .work-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul #sidemenu {
+        display: flex !important;
+        flex-direction: row;
+    }
+
+    nav i.fa-bars, nav i.fa-x {
+        display: none;
+    }
+}
